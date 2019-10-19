@@ -415,7 +415,8 @@ proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
 remote $CLIENT 999 udp
-remote $IP:$PORT@anywhere.truevisions.tv.ps.line.naver.jp.coral.dtac.co.th $PORT
+http-proxy-option CUSTOM-HEADER X-Online-Host: cdngarenanow-a.akamaihd.net
+remote $IP:$PORT@cdngarenanow-a.akamaihd.net $PORT
 http-proxy $IP $PROXY
 resolv-retry infinite
 nobind
